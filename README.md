@@ -42,15 +42,15 @@ The Student Result Management System allows admin to efficiently manage academic
 
 1. Clone this repository to your local machine.
 2. Install Node.js and npm.
-3. Install the required modules by running the following command.
+3. Navigate to the project directory.   
+4. Install the required modules by running the following command.
    ```shell
    npm i
    ```
-5. Navigate to the project directory.
-6. Run the application.
+5. Run the application.
    ```shell
    npm start
    ```
-7. Open your web browser and go to [http://localhost:3000]
+6. Open your web browser and go to [http://localhost:3000]
 
 
