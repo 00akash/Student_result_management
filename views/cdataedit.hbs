@@ -1,0 +1,21 @@
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+       
+             <form action="/coursedata/edit/{{coursedata.C_No}}" method="post">
+             <div class="form-group">
+              <input type="number" name="Teach_Id" class="form-control" value={{coursedata.Teach_Id}} placeholder="Teach_Id" />
+          </div>
+          <div class="form-group">
+              <input type="number" name="C_No" class="form-control" value={{coursedata.C_No}} placeholder="C_No" />
+          </div>
+          <div class="form-group">
+              <button class="btn btn-info">Save CourseData</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

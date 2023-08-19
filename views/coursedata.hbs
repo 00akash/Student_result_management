@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Coursedata table</h1>
+    <h2>{{title}}</h2>
+
+    <a href="/coursedata/create-form" class="btn btn-success">insert Coursedata</a>
+    <br /><br />
+    <table class="table">
+        <tr>
+          
+            <th>Teach_Id</th>
+            <th>C_No</th>
+            
+            <th>Action</th>
+        
+        </tr>
+        {{#each coursedata}}
+        <tr>
+           <td>{{this.Teach_Id}}</td>
+            <td>{{this.C_No}}</td>
+            
+            <td>
+                <a href="/coursedata/edit-form/{{this.C_No}}" class="btn btn-info btn-sm">Update</a>
+                <a href="/coursedata/delete/{{this.C_No}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

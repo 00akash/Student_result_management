@@ -1,0 +1,29 @@
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+       <form action="/employeeinfo/edit/{{employeeinfo.Emp_Id}}" method="post">
+          <div class="form-group">
+              <input type="number" name="Emp_Id" class="form-control" value={{employeeinfo.Emp_Id}} placeholder="Emp_Id" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="F_Name" class="form-control" value={{employeeinfo.F_Name}} placeholder="F_Name" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="M_Name" class="form-control" value={{employeeinfo.M_Name}} placeholder="M_Name" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="L_Name" class="form-control" value={{employeeinfo.L_Name}} placeholder="L_Name" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="Job_Type" class="form-control" value={{employeeinfo.Job_Type}} placeholder="Job_Type" />
+          </div>
+          <div class="form-group">
+              <button class="btn btn-info">Save Employeeinfo</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

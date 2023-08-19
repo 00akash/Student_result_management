@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.box {
+  width: calc(50% - 10px); 
+  border: 1px solid #ccc;
+  margin-bottom: 20px; 
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.box:nth-child(2n+1) {
+  margin-right: 20px;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+  display: block;
+}
+
+.btn-box {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #3498db;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{title}}</h1>
+    <hr />
+    <div class="row">
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="User Table">
+          <a href="/user" class="btn-box"> User Data</a>
+        </div>
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/courseinfo" class="btn-box">Course information</a>
+        </div>
+        
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/coursedata" class="btn-box">Course Data </a>
+        </div>
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/employeeinfo" class="btn-box">Employee Information</a>
+        </div>
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/employeedata" class="btn-box">Employee Data</a>
+        </div>
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/studentinfo" class="btn-box">Student Information</a>
+        </div>
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/studentdata" class="btn-box">Student Data</a>
+        </div> 
+         <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/teacher" class="btn-box">Teacher Data</a>
+        </div> 
+         <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/non_teaching_staff" class="btn-box">Non-Teaching Staff Data</a>
+        </div> 
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/enrollment" class="btn-box">Enrollment Data</a>
+        </div>     
+        <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/Ex" class="btn-box">Export All Data</a>
+        </div> 
+         <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwws6jjdv67ujO4WHkeaJfsp4WJAh0v_JNaVoLf20qA&s" alt="Course Table">
+          <a href="/imp" class="btn-box">Import Data</a>
+        </div>    
+    </div>
+  </div>
+</body>
+</html>

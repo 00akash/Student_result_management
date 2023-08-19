@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>mysql database connection and select query</h1>
+    <h2>{{title}}</h2>
+
+    <a href="/enrollment/create-form" class="btn btn-success">Insert enrollment</a>
+    <br /><br />
+    <table class="table">
+        <tr>
+            <th>C_No</th>
+            <th>Roll_No</th>
+            <th>MTexam_Date</th>
+            <th>MTexam_Makrs</th>
+            <th>Finalexam_Date</th>
+            <th>Finalexam_Marks</th>
+            <th>Total</th>
+            <th>Action</th>
+        
+        </tr>
+        {{#each enrollment}}
+        <tr>
+            <td>{{this.C_No}}</td>
+            <td>{{this.Roll_No}}</td>
+            <td>{{this.MTexam_Date}}</td>
+            <td>{{this.MTexam_Makrs}}</td>
+            <td>{{this.Finalexam_Date}}</td>
+            <td>{{this.Finalexam_Marks}}</td>
+            <td>{{this.Total}}</td>
+            
+            <td>
+                <a href="/enrollment/edit-form/{{this.C_No}}" class="btn btn-info btn-sm">Update</a>
+                <a href="/enrollment/delete/{{this.C_No}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h1>{{title}}</h1>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+       
+      <form action="/enrollment/edit/{{enrollment.C_No}}" method="post">
+          <div class="form-group">
+              <input type="number" name="C_No" class="form-control" value={{enrollment.C_No}} placeholder="C_No" />
+          </div>
+          <div class="form-group">
+              <input type="number" name="Roll_No" class="form-control" value={{enrollment.Roll_No}} placeholder="Roll_No" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="MTexam_Date" class="form-control" value={{enrollment.MTexam_Date}} placeholder="MTexam_Date" />
+          </div>
+          <div class="form-group">
+              <input type="number" name="MTexam_Makrs" class="form-control" value={{enrollment.MTexam_Makrs}} placeholder="MTexam_Marks" />
+          </div>
+          <div class="form-group">
+              <input type="text" name="Finalexam_Date" class="form-control" value={{enrollment.Finalexam_Date}} placeholder="finalexam_Date" />
+          </div>
+          <div class="form-group">
+              <input type="number" name="Finalexam_Marks" class="form-control" value={{enrollment.Finalexam_Marks}} placeholder="finalexam_Marks" />
+          </div>
+          <div class="form-group">
+              <input type="number" name="Total" class="form-control" value={{enrollment.Total}} placeholder="Total" />
+          </div>
+          <div class="form-group">
+              <button class="btn btn-info">Save Product</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

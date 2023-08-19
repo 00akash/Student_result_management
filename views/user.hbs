@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>mysql database connection and select query</h1>
+    <h2>{{title}}</h2>
+
+    <a href="/user/create-form" class="btn btn-success">insert user</a>
+    <br /><br />
+    <table class="table">
+        <tr>
+            <th>Usr_Id</th>
+            <th>Password</th>
+           {{!--  <th>Teacher_Id</th> --}}
+            <th>Action</th>
+        
+        </tr>
+        {{#each user}}
+        <tr>
+            <td>{{this.Usr_Id}}</td>
+            <td>{{this.Password}}</td>
+            
+            <td>
+                <a href="/user/edit-form/{{this.Usr_Id}}" class="btn btn-info btn-sm">Update</a>
+                <a href="/user/delete/{{this.Usr_Id}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

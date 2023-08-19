@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>mysql database connection and select query</h1>
+    <h2>{{title}}</h2>
+
+    <a href="/courseinfo/create-form" class="btn btn-success">insert new courseinfo</a>
+    <br /><br />
+    <table class="table">
+        <tr>
+            <th>C_No</th>
+            <th>C_Name</th>
+            <th>Action</th>
+        
+        </tr>
+        {{#each courseinfo}}
+        <tr>
+            <td>{{this.C_No}}</td>
+            <td>{{this.C_Name}}</td>
+            <td>
+                <a href="/courseinfo/edit-form/{{this.C_No}}" class="btn btn-info btn-sm">Update</a>
+                <a href="/courseinfo/delete/{{this.C_No}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
