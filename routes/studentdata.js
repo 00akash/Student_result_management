@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 
     db.query(query,function(err,rows,fields){
      if(err) throw err;
-     res.render('studentdata', { title: 'studentdata',studentdata:rows });
+     res.render('studentdata', { title: 'Student Data',studentdata:rows });
     })
   
 });
@@ -28,17 +28,17 @@ router.post('/create',function(req,res,next){
     })
 })
 
-router.get('/edit-form/:Roll_No',function(req,res,next){
-    var Usr_Id = req.params.Roll_No;
+router.get('/edit-form/:Usr_Id',function(req,res,next){
+    var Usr_Id= req.params.Usr_Id;
     var sql = `select * from studentdata where Usr_Id=${Usr_Id}`;
     db.query(sql,function(err,rows,fields){
-        res.render('sdataedit',{title: 'Update studentdata',studentdata: rows[0]});
+        res.render('sdataedit',{title: 'Update Student Data',studentdata: rows[0]});
     })
 
 })
 
-router.post('/edit/:Roll_No',function(req,res,next){
-    var id = req.params.Roll_No;
+router.post('/edit/:Usr_Id',function(req,res,next){
+    var id = req.params.Usr_Id;
     
     var Usr_Id = req.body.Usr_Id;
     var Roll_No = req.body.Roll_No;
@@ -58,7 +58,7 @@ router.post('/edit/:Roll_No',function(req,res,next){
 router.get('/delete/:Roll_No', function(req, res){
     var id = req.params.Roll_No;
     console.log(id);
-    var sql = `DELETE FROM studentdata WHERE Usr_Id=${id}`;
+    var sql = `DELETE FROM studentdata WHERE Roll_No=${id}`;
   
     db.query(sql, function(err, result) {
       if (err) throw err;

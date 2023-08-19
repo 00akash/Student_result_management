@@ -8,13 +8,13 @@ router.get('/', function(req, res, next) {
     db.query(query,function(err,rows,fields){
      if(err) throw err;
  
-     res.render('non_teaching_staff', { title: 'non_teaching_staff',non_teaching_staff:rows });
+     res.render('non_teaching_staff', { title: 'Non Teaching Staff',non_teaching_staff:rows });
     })
   
 });
 
 router.get('/create-form',function(req,res,next){
-    res.render('noncreateform',{title: 'insert data'});
+    res.render('noncreateform',{title: 'insert Non Teaching Staff Data'});
 })
 
 router.post('/create',function(req,res,next){

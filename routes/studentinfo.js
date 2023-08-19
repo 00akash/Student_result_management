@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 
     db.query(query,function(err,rows,fields){
      if(err) throw err;
-     res.render('studentinfo', { title: 'studentinfo',studentinfo:rows });
+     res.render('studentinfo', { title: 'Student Information',studentinfo:rows });
     })
   
 });

@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     db.query(query,function(err,rows,fields){
      if(err) throw err;
 
-     res.render('enrollment', { title: 'enrollment',enrollment:rows });
+     res.render('enrollment', { title: 'Result',enrollment:rows });
     })
   
 });
@@ -39,7 +39,7 @@ router.get('/edit-form/:C_No',function(req,res,next){
     var C_No = req.params.C_No;
     var sql = `select * from enrollment where C_No=${C_No}`;
     db.query(sql,function(err,rows,fields){
-        res.render('enrolledit',{title: 'Update enrollment',enrollment: rows[0]});
+        res.render('enrolledit',{title: 'Update Result',enrollment: rows[0]});
     })
 
 })

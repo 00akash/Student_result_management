@@ -8,13 +8,13 @@ router.get('/', function(req, res, next) {
     db.query(query,function(err,rows,fields){
      if(err) throw err;
 
-     res.render('employeeinfo', { title: 'employeeinfo',employeeinfo:rows });
+     res.render('employeeinfo', { title: 'Employee Information',employeeinfo:rows });
     })
   
 });
 
 router.get('/create-form',function(req,res,next){
-    res.render('einfocreateform',{title: 'insert employeeinfo data'});
+    res.render('einfocreateform',{title: 'Insert Employee Information'});
 })
 
 router.post('/create',function(req,res,next){
@@ -37,7 +37,7 @@ router.get('/edit-form/:Emp_Id',function(req,res,next){
     var Emp_Id = req.params.Emp_Id;
     var sql = `select * from employeeinfo where Emp_Id=${Emp_Id}`;
     db.query(sql,function(err,rows,fields){
-        res.render('einfoeditform',{title: 'Update employeeinfo',employeeinfo: rows[0]});
+        res.render('einfoeditform',{title: 'Update Employee Information',employeeinfo: rows[0]});
     })
 
 })

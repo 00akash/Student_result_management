@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 
     db.query(query,function(err,rows,fields){
 
-     res.render('courseinfo', { title: 'courseinfo',courseinfo:rows });
+     res.render('courseinfo', { title: 'Course Information',courseinfo:rows });
     })
   
 });
@@ -33,7 +33,7 @@ router.get('/edit-form/:C_No',function(req,res,next){
     var id = req.params.C_No;
     var sql = `select * from courseinfo where C_No=${id}`;
     db.query(sql,function(err,rows,fields){
-        res.render('editform',{title: 'Update courseinfo',courseinfo: rows[0]});
+        res.render('editform',{title: 'Update Course Information',courseinfo: rows[0]});
     })
 
 })

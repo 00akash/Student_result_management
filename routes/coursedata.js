@@ -8,13 +8,13 @@ router.get('/', function(req, res, next) {
     db.query(query,function(err,rows,fields){
      if(err) throw err;
 
-     res.render('coursedata', { title: 'coursedata',coursedata:rows });
+     res.render('coursedata', { title: 'Teacher',coursedata:rows });
     })
   
 });
 
 router.get('/create-form',function(req,res,next){
-    res.render('coursedatacreateform',{title: 'insert course data'});
+    res.render('coursedatacreateform',{title: 'insert Teacher data'});
 })
 
 router.post('/create',function(req,res,next){
@@ -34,7 +34,7 @@ router.get('/edit-form/:C_No',function(req,res,next){
     var C_No = req.params.C_No;
     var sql = `select * from coursedata where C_No=${C_No}`;
     db.query(sql,function(err,rows,fields){
-        res.render('cdataedit',{title: 'Update coursedata',coursedata: rows[0]});
+        res.render('cdataedit',{title: 'Update Teacherdata',coursedata: rows[0]});
     })
 
 })
