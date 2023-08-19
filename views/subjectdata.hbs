@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Subjects Details</h1>
+    <h2>{{title}}</h2>
+
+    <a href="/subjectdata/create-form" class="btn btn-success">Insert Subject</a>
+    <br /><br />
+    <table class="table">
+        <tr>
+            <th>Subject Code</th>
+            <th>Subject Name</th>
+            <th>Semester</th>
+            <th>Action</th>
+        
+        </tr>
+        {{#each subjectdata}}
+        <tr>
+            <td>{{this.Sub_code}}</td>
+            <td>{{this.Sub_name}}</td>
+            <td>{{this.Semester}}</td>
+           
+            <td>
+                <a href="/subjectdata/edit-form/{{this.Sub_code}}" class="btn btn-info btn-sm">Update</a>
+                <a href="/subjectdata/delete/{{this.Sub_code}}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

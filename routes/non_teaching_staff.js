@@ -7,9 +7,7 @@ router.get('/', function(req, res, next) {
 
     db.query(query,function(err,rows,fields){
      if(err) throw err;
-     //res.json(rows);
-     //res.json(rows[0]);// for 1 record// if  var query = 'select * from courses where name='jay';
-
+ 
      res.render('non_teaching_staff', { title: 'non_teaching_staff',non_teaching_staff:rows });
     })
   
@@ -36,7 +34,7 @@ router.get('/edit-form/:Emp_Id',function(req,res,next){
     var Emp_Id = req.params.Emp_Id;
     var sql = `select * from non_teaching_staff where Emp_Id=${Emp_Id}`;
     db.query(sql,function(err,rows,fields){
-        res.render('nonedit',{title: 'Update non_teach',course: rows[0]});
+        res.render('nonedit',{title: 'Update Non Teaching Staff',course: rows[0]});
     })
 
 })

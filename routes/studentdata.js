@@ -7,9 +7,6 @@ router.get('/', function(req, res, next) {
 
     db.query(query,function(err,rows,fields){
      if(err) throw err;
-     //res.json(rows);
-     //res.json(rows[0]);// for 1 record// if  var query = 'select * from courses where name='jay';
-
      res.render('studentdata', { title: 'studentdata',studentdata:rows });
     })
   
