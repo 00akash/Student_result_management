@@ -4,6 +4,9 @@
 
 The Student Result Management System is a comprehensive database management system designed for managing student results, courses, subjects, teachers, and administrators. The system aims to provide an efficient and user-friendly platform for admin to manage and access academic information.
 
+## ER Diagram
+![ER_dg](https://github.com/00akash/Student_result_management/assets/76787526/62b8851d-94c4-4b15-a86c-51b96ec022cb)
+
 ## Home layout
 ![Main_page_page-000](https://github.com/00akash/Student_result_management/assets/76787526/b24007e0-ba24-4eb1-b231-60930fffa0bc)
 
@@ -19,60 +22,35 @@ The Student Result Management System is a comprehensive database management syst
 ## Insert Layout
 ![insert_page-000](https://github.com/00akash/Student_result_management/assets/76787526/b6a07b87-218f-4df8-9921-45c9279e7688)
 
-## Entities and Attributes
+# Student Result Management Web Application
 
-### Student
-- S_id (Student ID)
-- First_Name
-- Last_Name
-- DOB (Date of Birth)
-- Batch_Name
+The Student Result Management System allows admin to efficiently manage academic data, including student information, teacher, course details, subject information, and result records. It is built using the Node.js, Express, Pug, and MySQL frameworks. The application allows users to perform CRUD operations (create, read, update, and delete) on student results. It also provides the functionality to export all student results to a CSV file.
 
-### Teacher
-- T_id (Teacher ID)
-- C_No
-- Name
+## Features
 
-### Result
-- C_No
-- Roll_No
-- MTexam_Date
-- MTexam_Marks
-- Finalexam_Date
-- Finalexam_Marks
-- Total
+- Create, read, update, and delete: student information, teacher, course details, subject information, and result records etc.
+- Export all student results to a CSV file
 
-### Course
-- C_id (Course ID)
-- C_Name (Course Name)
+## Requirements
 
-### Subject
-- Sub_Code (Subject Code)
-- Sub_Name (Subject Name)
-- Semester
+- Node.js
+- Express
+- Pug
+- MySQL
 
-### User
-- User_id
-- User_Name
+## Installation
 
-### Non Teaching Staff
-- Emp_Id
-- Type
-  
-## Relations
+1. Clone this repository to your local machine.
+2. Install Node.js and npm.
+3. Install the required modules by running the following command.
+   ```shell
+   npm i
+   ```
+5. Navigate to the project directory.
+6. Run the application.
+   ```shell
+   npm start
+   ```
+7. Open your web browser and go to [http://localhost:3000]
 
-- Each User is a Student, Teacher, or Admin.
-- Any Admin can manage (add/delete/update) all student results and student records, including course management.
-- Each Course can have multiple subjects.
-- Any Teacher can modify (update marks) all student results.
-- One Teacher is assigned to one Subject.
-- Each Student can take multiple Subjects.
-- Each Student can register for only one Course.
-- Students can only view their own Result.
-
-## Project Scope
-
-The Student Result Management System allows admin to efficiently manage academic data, including student information, teacher assignments, course details, subject information, and result records.
-
-The database design and relationships enable efficient data management, including result calculations, pass/fail determinations. The project's scope covers user authentication, data entry, data modification, and data retrieval while adhering to proper access controls for security.
 
